@@ -5,63 +5,161 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sayan Patra</title>
-<link rel="icon" href="/favicon.ico">
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
 body {
   font-family: Calibri;
-  cursor: url('https://raw.githubusercontent.com/Sayanpatraa/sayanpatraa.github.io/main/custom-icon.cur'), auto;
+  text-align: justify;
 }
+
+/* Dark mode */
+.dark {
+  background-color: #0c0c0c;
+  color: #e5e5e5;
+}
+
+.dark .card {
+  background-color: #111;
+}
+
+/* emphasis */
 .blue-bolds b { color:#2563eb; }
 </style>
 </head>
 
-<body class="bg-white text-stone-900 flex justify-center py-12">
+<body class="flex justify-center py-12 transition-colors duration-300">
 
 <div class="max-w-6xl w-full px-6">
 
-<!-- ===== HEADER ===== -->
-<div class="grid grid-cols-1 md:grid-cols-5 gap-10">
+<!-- TOP BAR -->
+<div class="flex justify-between items-center mb-6">
+<div class="text-2xl font-bold">Sayan Patra</div>
+
+<button onclick="toggleDark()" 
+class="text-sm border px-3 py-1 hover:bg-stone-200 dark:hover:bg-stone-700">
+Toggle Dark Mode
+</button>
+</div>
+
+
+<!-- HEADER -->
+<div class="grid md:grid-cols-5 gap-10">
 
 <!-- LEFT -->
-<div class="md:col-span-1 space-y-6">
-
-<img class="w-full border border-stone-200"
+<div class="space-y-4">
+<img class="w-full border"
 src="https://avatars.githubusercontent.com/u/179540456?v=4">
-
-<div class="text-sm space-y-2 text-stone-700">
-<div><b>Email:</b> sayan.patra@gwu.edu</div>
-<div><b>Location:</b> Washington, DC</div>
+<div class="text-sm">Washington, DC</div>
 </div>
-
-</div>
-
 
 <!-- RIGHT -->
-<div class="md:col-span-4">
+<div class="md:col-span-4 space-y-3">
 
-<div class="text-3xl font-bold mb-2">Sayan Patra</div>
-
-<p class="text-sm text-stone-700 leading-relaxed blue-bolds">
-Research in <b>neuromorphic computation</b>, <b>geometric machine learning</b>,
-and <b>uncertainty-aware inference</b>. Focus on systems that unify 
-<b>aleatory uncertainty</b> (stochastic variability) and 
-<b>epistemic uncertainty</b> (model insufficiency) through 
-<b>probabilistic structure</b>, <b>generative modeling</b>, and 
-<b>decision-theoretic learning</b>.
+<p class="text-sm blue-bolds">
+Research in <b>neuromorphic computation</b>, <b>geometric learning</b>, and 
+<b>uncertainty-aware inference</b>. Focus on <b>aleatory</b> and 
+<b>epistemic uncertainty</b>.
 </p>
 
-<p class="text-sm text-stone-700 mt-3">
+<p class="text-sm">
 M.S. Data Science, George Washington University  
-<br>Honors B.Sc. Mathematics  
-<br>Research with <b>Dr. Junjun Yin</b>
+<br>Honors B.Sc. Mathematics
 </p>
 
-<!-- LINKS -->
-<div class="flex flex-wrap gap-4 text-sm mt-4 text-blue-600">
-<a href="mailto:sayan.patra@gwu.edu">Email</a>
-<a href="https://github.com/sayanpatraa" target="_blank">GitHub</a>
+</div>
+</div>
+
+<!-- RESEARCH STATEMENT -->
+<div class="mt-12 max-w-3xl text-sm blue-bolds">
+<p>
+Unified frameworks for <b>learning under uncertainty</b> integrating 
+<b>neuromorphic systems</b> and <b>non-Euclidean learning</b>.
+</p>
+</div>
+
+<!-- ===== FILTER CONTROLS ===== -->
+<div class="mt-16 flex gap-4 text-sm">
+<button onclick="filterPubs('all')" class="filter-btn">All</button>
+<button onclick="filterPubs('preprint')" class="filter-btn">Preprints</button>
+<button onclick="filterPubs('working')" class="filter-btn">Working</button>
+</div>
+
+<!-- ===== PUBLICATIONS ===== -->
+<div class="mt-8 space-y-10">
+
+<!-- PAPER 1 -->
+<div class="pub preprint grid md:grid-cols-4 gap-6 card p-3 rounded">
+
+<img src="images/uk_entropy_scatter.png" class="border">
+
+<div class="md:col-span-3 text-sm">
+<div class="font-semibold">Explaining Scenic Structure via Geometric Regularity</div>
+<div class="text-stone-500">Preprint, 2026</div>
+<div><b>Sayan Patra</b>, Junjun Yin</div>
+
+<p class="text-xs mt-2">
+<strong>Abstract:</strong>
+This work formalizes spatial coherence through geometric invariants, enabling interpretable prediction 
+and conditioning of generative vision systems.
+</p>
+</div>
+</div>
+
+<!-- PAPER 2 -->
+<div class="pub working grid md:grid-cols-4 gap-6 card p-3 rounded">
+
+<img src="images/newresearch.jpg" class="border">
+
+<div class="md:col-span-3 text-sm">
+<div class="font-semibold">Neural Population Dynamics for Adaptive Control</div>
+<div class="text-stone-500">Working Paper, 2026</div>
+
+<p class="text-xs mt-2">
+<strong>Abstract:</strong>
+Hierarchical control derived from neural population dynamics for adaptive embodied systems.
+</p>
+</div>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="mt-20 text-center text-xs opacity-60">
+© 2026 Sayan Patra
+</div>
+
+</div>
+
+<!-- ===== SCRIPT ===== -->
+<script>
+
+/* DARK MODE (persisted) */
+function toggleDark() {
+  document.body.classList.toggle("dark");
+  localStorage.setItem("darkmode", document.body.classList.contains("dark"));
+}
+
+if (localStorage.getItem("darkmode") === "true") {
+  document.body.classList.add("dark");
+}
+
+
+/* PUBLICATION FILTER */
+function filterPubs(type) {
+  document.querySelectorAll(".pub").forEach(el => {
+    if (type === "all") {
+      el.style.display = "grid";
+    } else {
+      el.style.display = el.classList.contains(type) ? "grid" : "none";
+    }
+  });
+}
+
+</script>
+
+</body>
+</html><a href="https://github.com/sayanpatraa" target="_blank">GitHub</a>
 <a href="https://www.linkedin.com/in/sayan-p-13a76a241/" target="_blank">LinkedIn</a>
 <a href="https://www.sayanpatra.com" target="_blank">Website</a>
 <a href="#" target="_blank">Google Scholar</a>
