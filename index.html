@@ -36,19 +36,68 @@
           <div class="font-bold text-3xl p-3 flex justify-center text-center text-stone-900">
             Sayan Patra
           </div>
+<!-- Tabs -->
+<div class="w-full flex justify-center mt-4">
+  <div class="flex space-x-4 border-b border-stone-300 pb-2">
+    <button class="tab-btn font-semibold text-stone-700 hover:text-blue-600" data-tab="bio">Bio</button>
+    <button class="tab-btn font-semibold text-stone-700 hover:text-blue-600" data-tab="research">Research</button>
+    <button class="tab-btn font-semibold text-stone-700 hover:text-blue-600" data-tab="interests">Interests</button>
+  </div>
+</div>
+
+<!-- Tab Content -->
+<div id="bio" class="tab-content mt-6">
+  <!-- Your bio will go here (see section 2 below) -->
+</div>
+
+<div id="research" class="tab-content hidden mt-6">
+  <p class="leading-relaxed text-stone-700 blue-bolds">
+    My research focuses on <b>neuromorphic computing</b> as a foundation for 
+    next‑generation intelligent systems. I explore how biologically inspired 
+    computation—across <b>vision</b>, <b>audition</b>, <b>tactile sensing</b>, 
+    and <b>spatial perception</b>—can be unified with 
+    <b>geometric machine learning</b>, <b>generative modeling</b>, and 
+    <b>game‑theoretic learning</b>.
+  </p>
+</div>
+
+<div id="interests" class="tab-content hidden mt-6">
+  <ul class="list-disc pl-6 leading-relaxed text-stone-700 blue-bolds">
+    <li><b>Neuromorphic architectures</b> for sensory-driven computation</li>
+    <li><b>Geometric deep learning</b> on graphs, manifolds, and non-Euclidean spaces</li>
+    <li><b>Generative modeling</b> for image synthesis and multi-modal learning</li>
+    <li><b>Non-smooth games</b> and equilibrium behavior in high-dimensional systems</li>
+    <li><b>Multi-agent learning</b> and strategic interaction</li>
+  </ul>
+</div>
+
+<!-- Tab Script -->
+<script>
+  const tabs = document.querySelectorAll(".tab-btn");
+  const contents = document.querySelectorAll(".tab-content");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      contents.forEach(c => c.classList.add("hidden"));
+      document.getElementById(tab.dataset.tab).classList.remove("hidden");
+    });
+  });
+</script>
 
       
-          <div class="text-md blue-bolds space-y-4 text-stone-700 leading-relaxed text-left pt-3">
-            <div>
-                 I’m interested in <b>geometric machine learning</b> for <b>image generation</b> and <b>game theory</b>. 
-  
-                 I hold an <b>Honors B.Sc.</b> in <b>Mathematics</b> and spent a year in <b>EMEA retail strategy</b> at <b>Amazon Corporate</b>. 
-           
-                 Currently, I am pursuing <b>M.S. in Data Science</b> at <b>George Washington University</b>, conducting research under <b>Dr. Junjun Yin</b>.
-            </div>
-            <div>
-                 I am <b>seeking new opportunities</b> to advance my research in the intersection of <b>non-Euclidean data structures</b>, <b>generative modeling</b>, <b>non-smooth games</b>.
-            </div>
+          <div class="text-md blue-bolds space-y-4 text-stone-700 leading-relaxed text-left pt-3">    
+            <div> My work centers on <b>neuromorphic computing</b> as a foundation for next‑generation intelligent systems. 
+              I explore how biologically inspired      computation—across <b>vision</b>, <b>audition</b>, <b>tactile sensing</b>,
+              and <b>spatial perception</b>—can be integrated with      <b>geometric machine learning</b>, <b>image generation</b>,
+              and      <b>game‑theoretic learning</b>.   </div>    <div>     I hold an <b>Honors B.Sc. in Mathematics</b> and spent a year in
+                <b>EMEA Retail Strategy</b> at <b>Amazon Corporate</b>. I am currently      pursuing an <b>M.S. in Data Science</b> at      
+                <b>George Washington University</b>, conducting research under      <b>Dr. Junjun Yin</b>.   
+            </div>   
+            <div> I am <b>seeking new opportunities</b> to advance research at the intersection of <b>neuromorphic architectures</b>, 
+              <b>non‑Euclidean data structures</b>,      <b>generative modeling</b>, and <b>non‑smooth games</b>.   
+            </div>  
+          </div>
+            
           </div>
 
           <!-- 1. Social Contact Links Container (Clean horizontal flow) -->
