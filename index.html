@@ -14,7 +14,7 @@
       cursor: url('https://github.com/Sayanpatraa/sayanpatraa.github.io/blob/main/custom-icon.cur'), auto; 
     }
     /* Keeps your blue bold text rule intact */
-    .black-bolds b {
+    .blue-bolds b {
       color: #2563eb;       
     }
   </style>
@@ -25,84 +25,92 @@
     <div class="max-w-5xl p-6">
       <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-start text-left">
 
-        <!-- Profile Image -->
-        <div class="md:col-span-1 md:pt-10">
-          <img class="w-full aspect-square object-cover shadow-sm border-2 border-stone-200 block rounded-none"
-            src="https://avatars.githubusercontent.com/u/179540456?v=4">
-        </div>
+        <!-- Main Content (Full Width on Desktop) -->
+        <div class="col-span-1 md:col-span-5">
+          
+          <!-- Header: Photo, Name, and Tabs Container -->
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-6 items-start">
+            
+            <!-- Profile Image -->
+            <div class="md:col-span-1">
+              <img class="w-full aspect-square object-cover shadow-sm border-2 border-stone-200 block rounded-none"
+                src="https://avatars.githubusercontent.com/u/179540456?v=4" alt="Profile">
+            </div>
 
-        <!-- Main Content -->
-        <div class="col-span-4">
-          <!-- Name Header -->
-          <div class="font-bold text-3xl p-3 flex justify-center text-center text-stone-900">
-            Sayan Patra
-          </div>
+            <!-- Name and Tabs Section -->
+            <div class="md:col-span-4">
+              <!-- Name Header -->
+              <div class="font-bold text-3xl p-3 flex justify-center text-center text-stone-900">
+                Sayan Patra
+              </div>
 
-          <!-- Tabs -->
-          <div class="w-full flex justify-center mt-4">
-            <div class="flex space-x-4 border-b border-stone-300 pb-2">
-              <button class="tab-btn font-semibold text-stone-700 hover:text-blue-600" data-tab="bio">Bio</button>
-              <button class="tab-btn font-semibold text-stone-700 hover:text-blue-600" data-tab="research">Research</button>
-              <button class="tab-btn font-semibold text-stone-700 hover:text-blue-600" data-tab="interests">Interests</button>
+              <!-- Tabs -->
+              <div class="w-full flex justify-center mt-4">
+                <div class="flex space-x-4 border-b border-stone-300 pb-2">
+                  <button class="tab-btn font-semibold text-stone-700 hover:text-blue-600" data-tab="bio">Bio</button>
+                  <button class="tab-btn font-semibold text-stone-700 hover:text-blue-600" data-tab="research">Research</button>
+                  <button class="tab-btn font-semibold text-stone-700 hover:text-blue-600" data-tab="interests">Interests</button>
+                </div>
+              </div>
+
+              <!-- Tab Content -->
+              <div id="bio" class="tab-content mt-6">
+                <div class="text-md blue-bolds space-y-4 text-stone-700 leading-relaxed text-left pt-3">    
+                  <div> My work centers on <b>neuromorphic computing</b> as a foundation for next‑generation intelligent systems. 
+                    I explore how biologically inspired computation—across <b>vision</b>, <b>audition</b>, <b>tactile sensing</b>,
+                    and <b>spatial perception</b>—can be integrated with <b>geometric machine learning</b>, <b>image generation</b>,
+                    and <b>game‑theoretic learning</b>.
+                  </div>    
+                  <div>     
+                    I hold an <b>Honors B.Sc. in Mathematics</b> and spent a year in
+                    <b>EMEA Retail Strategy</b> at <b>Amazon Corporate</b>. I am currently pursuing an <b>M.S. in Data Science</b> at      
+                    <b>George Washington University</b>, conducting research under <b>Dr. Junjun Yin</b>.   
+                  </div>   
+                  <div> 
+                    I am <b>seeking new opportunities</b> to advance research at the intersection of <b>neuromorphic architectures</b>, 
+                    <b>non‑Euclidean data structures</b>, <b>generative modeling</b>, and <b>non‑smooth games</b>.   
+                  </div>  
+                </div>
+              </div>
+
+              <div id="research" class="tab-content hidden mt-6">
+                <p class="leading-relaxed text-stone-700 blue-bolds">
+                  My research focuses on <b>neuromorphic computing</b> as a foundation for 
+                  next‑generation intelligent systems. I explore how biologically inspired 
+                  computation—across <b>vision</b>, <b>audition</b>, <b>tactile sensing</b>, 
+                  and <b>spatial perception</b>—can be unified with 
+                  <b>geometric machine learning</b>, <b>generative modeling</b>, and 
+                  <b>game‑theoretic learning</b>.
+                </p>
+              </div>
+
+              <div id="interests" class="tab-content hidden mt-6">
+                <ul class="list-disc pl-6 leading-relaxed text-stone-700 blue-bolds">
+                  <li><b>Neuromorphic architectures</b> for sensory-driven computation</li>
+                  <li><b>Geometric deep learning</b> on graphs, manifolds, and non-Euclidean spaces</li>
+                  <li><b>Generative modeling</b> for image synthesis and multi-modal learning</li>
+                  <li><b>Non-smooth games</b> and equilibrium behavior in high-dimensional systems</li>
+                  <li><b>Multi-agent learning</b> and strategic interaction</li>
+                </ul>
+              </div>
+
+              <!-- Tab Script -->
+              <script>
+                const tabs = document.querySelectorAll(".tab-btn");
+                const contents = document.querySelectorAll(".tab-content");
+
+                tabs.forEach(tab => {
+                  tab.addEventListener("click", () => {
+                    contents.forEach(c => c.classList.add("hidden"));
+                    document.getElementById(tab.dataset.tab).classList.remove("hidden");
+                  });
+                });
+              </script>
             </div>
           </div>
-
-          <!-- Tab Content -->
-          <div id="bio" class="tab-content mt-6">
-            <div class="text-md blue-bolds space-y-4 text-stone-700 leading-relaxed text-left pt-3">    
-              <div> My work centers on <b>neuromorphic computing</b> as a foundation for next‑generation intelligent systems. 
-                I explore how biologically inspired computation—across <b>vision</b>, <b>audition</b>, <b>tactile sensing</b>,
-                and <b>spatial perception</b>—can be integrated with <b>geometric machine learning</b>, <b>image generation</b>,
-                and <b>game‑theoretic learning</b>.
-              </div>    
-              <div>     
-                I hold an <b>Honors B.Sc. in Mathematics</b> and spent a year in
-                <b>EMEA Retail Strategy</b> at <b>Amazon Corporate</b>. I am currently pursuing an <b>M.S. in Data Science</b> at      
-                <b>George Washington University</b>, conducting research under <b>Dr. Junjun Yin</b>.   
-              </div>   
-              <div> 
-                I am <b>seeking new opportunities</b> to advance research at the intersection of <b>neuromorphic architectures</b>, 
-                <b>non‑Euclidean data structures</b>, <b>generative modeling</b>, and <b>non‑smooth games</b>.   
-              </div>  
-            </div>
-          </div>
-
-          <div id="research" class="tab-content hidden mt-6">
-            <p class="leading-relaxed text-stone-700 blue-bolds">
-              My research focuses on <b>neuromorphic computing</b> as a foundation for 
-              next‑generation intelligent systems. I explore how biologically inspired 
-              computation—across <b>vision</b>, <b>audition</b>, <b>tactile sensing</b>, 
-              and <b>spatial perception</b> can be unified with 
-              <b>geometric machine learning</b>, <b>generative modeling</b>, and 
-              <b>game‑theoretic learning</b>.
-            </p>
-          </div>
-
-          <div id="interests" class="tab-content hidden mt-6">
-            <ul class="list-disc pl-6 leading-relaxed text-stone-700 blue-bolds">
-              <li><b>Neuromorphic architectures</b> for sensory-driven computation</li>
-              <li><b>Geometric deep learning</b> on graphs, manifolds, and non-Euclidean spaces</li>
-              <li><b>Generative modeling</b> for image synthesis and multi-modal learning</li>
-              <li><b>Non-smooth games</b> and equilibrium behavior in high-dimensional systems</li>
-              <li><b>Multi-agent learning</b> and strategic interaction</li>
-            </ul>
-          </div>
-
-          <!-- Tab Script -->
-          <script>
-            const tabs = document.querySelectorAll(".tab-btn");
-            const contents = document.querySelectorAll(".tab-content");
-
-            tabs.forEach(tab => {
-              tab.addEventListener("click", () => {
-                contents.forEach(c => c.classList.add("hidden"));
-                document.getElementById(tab.dataset.tab).classList.remove("hidden");
-              });
-            });
-          </script>
 
           <!-- Social Contact Links -->
-          <div class="flex flex-row flex-wrap items-center gap-6 text-stone-600 text-sm pt-4 justify-center">
+          <div class="flex flex-row flex-wrap items-center gap-6 text-stone-600 text-sm pt-8 justify-center">
             <!-- Email -->
             <a href="mailto:sayan.patra@gwu.edu" class="flex items-center gap-1.5 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" title="Email">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"></path></svg>
@@ -213,7 +221,7 @@
           </div>
 
         </div>
-        <!-- Closes col-span-4 (Right Main Content Stack) -->
+        <!-- Closes col-span-5 (Full Width Content) -->
 
       </div>
       <!-- Closes Master Layout Grid -->
