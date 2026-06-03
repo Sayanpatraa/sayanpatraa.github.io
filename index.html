@@ -1,224 +1,226 @@
 <!doctype html>
-<html lang="en">
+<html>
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<script src="https://cdn.tailwindcss.com"></script>
-
-<title>Sayan Patra</title>
-<link rel="icon" href="/favicon.ico">
-
-<style>
-body {
-  font-family: Calibri;
-  cursor: url('https://raw.githubusercontent.com/Sayanpatraa/sayanpatraa.github.io/main/custom-icon.cur'), auto;
-}
-
-/*  justified academic text */
-p, li {
-  text-align: justify;
-}
-
-/* emphasis */
-.blue-bolds b {
-  color: #2563eb;
-}
-
-/* dark mode */
-.dark {
-  background: #0c0c0c;
-  color: #e5e5e5;
-}
-.dark .text-stone-700 { color:#d6d6d6; }
-.dark .text-stone-900 { color:#ffffff; }
-.dark .border-stone-200 { border-color:#333; }
-.hidden { display:none; }
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Sayan Patra</title>
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    body {
+      font-family: Calibri;
+      /* Applies your custom image cursor to the whole page */
+      cursor: url('https://github.com/Sayanpatraa/sayanpatraa.github.io/blob/main/custom-icon.cur'), auto; 
+    }
+    /* Keeps your blue bold text rule intact */
+    .black-bolds b {
+      color: #2563eb;       
+    }
+  </style>
 </head>
 
-<body class="min-h-screen flex justify-center py-10">
+<body class="animated-bg min-h-screen flex justify-center py-10 font-sans antialiased tracking-tight text-stone-900">
+  <div class="grid place-items-center">
+    <div class="max-w-5xl p-6">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-start text-left">
 
-<div class="max-w-5xl p-6">
+        <!-- Profile Image -->
+        <div class="md:col-span-1 md:pt-10">
+          <img class="w-full aspect-square object-cover shadow-sm border-2 border-stone-200 block rounded-none"
+            src="https://avatars.githubusercontent.com/u/179540456?v=4">
+        </div>
 
-<!--ARK MODE BUTTON -->
-<div class="flex justify-end mb-4">
-<button onclick="toggleDark()" class="text-sm border px-3 py-1 hover:bg-stone-200">
-Mode
-</button>
-</div>
+        <!-- Main Content -->
+        <div class="col-span-4">
+          <!-- Name Header -->
+          <div class="font-bold text-3xl p-3 flex justify-center text-center text-stone-900">
+            Sayan Patra
+          </div>
 
-<div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+          <!-- Tabs -->
+          <div class="w-full flex justify-center mt-4">
+            <div class="flex space-x-4 border-b border-stone-300 pb-2">
+              <button class="tab-btn font-semibold text-stone-700 hover:text-blue-600" data-tab="bio">Bio</button>
+              <button class="tab-btn font-semibold text-stone-700 hover:text-blue-600" data-tab="research">Research</button>
+              <button class="tab-btn font-semibold text-stone-700 hover:text-blue-600" data-tab="interests">Interests</button>
+            </div>
+          </div>
 
-<!-- LEFT -->
-<div class="md:col-span-1 md:pt-10">
-<img class="w-full aspect-square object-cover border-2 border-stone-200"
-src="https://avatars.githubusercontent.com/u/179540456?v=4">
-</div>
+          <!-- Tab Content -->
+          <div id="bio" class="tab-content mt-6">
+            <div class="text-md blue-bolds space-y-4 text-stone-700 leading-relaxed text-left pt-3">    
+              <div> My work centers on <b>neuromorphic computing</b> as a foundation for next‑generation intelligent systems. 
+                I explore how biologically inspired computation—across <b>vision</b>, <b>audition</b>, <b>tactile sensing</b>,
+                and <b>spatial perception</b>—can be integrated with <b>geometric machine learning</b>, <b>image generation</b>,
+                and <b>game‑theoretic learning</b>.
+              </div>    
+              <div>     
+                I hold an <b>Honors B.Sc. in Mathematics</b> and spent a year in
+                <b>EMEA Retail Strategy</b> at <b>Amazon Corporate</b>. I am currently pursuing an <b>M.S. in Data Science</b> at      
+                <b>George Washington University</b>, conducting research under <b>Dr. Junjun Yin</b>.   
+              </div>   
+              <div> 
+                I am <b>seeking new opportunities</b> to advance research at the intersection of <b>neuromorphic architectures</b>, 
+                <b>non‑Euclidean data structures</b>, <b>generative modeling</b>, and <b>non‑smooth games</b>.   
+              </div>  
+            </div>
+          </div>
 
-<!-- RIGHT -->
-<div class="col-span-4">
+          <div id="research" class="tab-content hidden mt-6">
+            <p class="leading-relaxed text-stone-700 blue-bolds">
+              My research focuses on <b>neuromorphic computing</b> as a foundation for 
+              next‑generation intelligent systems. I explore how biologically inspired 
+              computation—across <b>vision</b>, <b>audition</b>, <b>tactile sensing</b>, 
+              and <b>spatial perception</b> can be unified with 
+              <b>geometric machine learning</b>, <b>generative modeling</b>, and 
+              <b>game‑theoretic learning</b>.
+            </p>
+          </div>
 
-<div class="text-3xl font-bold p-3 text-center">Sayan Patra</div>
+          <div id="interests" class="tab-content hidden mt-6">
+            <ul class="list-disc pl-6 leading-relaxed text-stone-700 blue-bolds">
+              <li><b>Neuromorphic architectures</b> for sensory-driven computation</li>
+              <li><b>Geometric deep learning</b> on graphs, manifolds, and non-Euclidean spaces</li>
+              <li><b>Generative modeling</b> for image synthesis and multi-modal learning</li>
+              <li><b>Non-smooth games</b> and equilibrium behavior in high-dimensional systems</li>
+              <li><b>Multi-agent learning</b> and strategic interaction</li>
+            </ul>
+          </div>
 
-<!-- TABS -->
-<div class="flex justify-center mt-4">
-<div class="flex space-x-4 border-b pb-2">
-<button class="tab-btn" data-tab="bio">Bio</button>
-<button class="tab-btn" data-tab="research">Research</button>
-<button class="tab-btn" data-tab="interests">Interests</button>
-</div>
-</div>
+          <!-- Tab Script -->
+          <script>
+            const tabs = document.querySelectorAll(".tab-btn");
+            const contents = document.querySelectorAll(".tab-content");
 
-<!-- BIO -->
-<div id="bio" class="tab-content mt-6 blue-bolds">
-<p>
-My work centers on <b>neuromorphic computing</b>. I unify sensory-driven computation with 
-<b>geometric machine learning</b> and <b>generative modeling</b>.
-</p>
+            tabs.forEach(tab => {
+              tab.addEventListener("click", () => {
+                contents.forEach(c => c.classList.add("hidden"));
+                document.getElementById(tab.dataset.tab).classList.remove("hidden");
+              });
+            });
+          </script>
 
-<p class="mt-3">
-I model systems under <b>aleatory uncertainty</b> and <b>epistemic uncertainty</b>, 
-emphasizing probabilistic inference and decision-theoretic consistency.
-</p>
+          <!-- Social Contact Links -->
+          <div class="flex flex-row flex-wrap items-center gap-6 text-stone-600 text-sm pt-4 justify-center">
+            <!-- Email -->
+            <a href="mailto:sayan.patra@gwu.edu" class="flex items-center gap-1.5 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" title="Email">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"></path></svg>
+              <span>Email</span>
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com/sayanpatraa" class="flex items-center gap-1.5 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" title="GitHub">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.48,0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.061.069-.061 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.577.688.479C19.138 20.164 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path></svg>
+              <span>GitHub</span>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/sayan-p-13a76a241/" class="flex items-center gap-1.5 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+              <span>LinkedIn</span>
+            </a>
+            <!-- Website -->
+            <a href="https://www.sayanpatra.com" class="flex items-center gap-1.5 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" title="Website">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-.856.12-1.685.344-2.472"></path></svg>
+              <span>Website</span>
+            </a>
+            <!-- CV -->
+            <a href="https://drive.google.com/file/d/18TqgfJTSJ9ThWh_NRGm5UhxCQdufMHFt/view?usp=sharing" class="flex items-center gap-1.5 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" title="Curriculum Vitae">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"></path>
+              </svg>
+              <span>CV</span>
+            </a>
+            <!-- Scholar -->
+            <a href="soon" class="flex items-center gap-1.5 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" title="Google Scholar">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l3.46 2.72C4.34 7.6 7.8 4.48 12 4.48s7.66 3.12 8.54 7.74L24 9.5 12 0zM12 12.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4z"></path></svg>
+              <span>Scholar</span>
+            </a>
+          </div>
 
-<p class="mt-3">
-B.Sc.(Hons.) Mathematics. Amazon (EMEA Strategy). M.S. Data Science, GWU. Research with <b>Dr. Junjun Yin</b>.
-</p>
-</div>
+          <!-- Research & Publications Section -->
+          <div class="space-y-8 mt-16">
+            <div class="flex justify-between items-end">
+              <div class="text-xl font-bold text-stone-900">Research & Publications</div>
+              <div class="text-xs text-stone-500 italic">* indicates equal contribution</div>
+            </div>
+            
+            <!-- Research Item 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-start mt-8">
+              <!-- Research Figure Column -->
+              <div class="md:col-span-1">
+                <img class="w-full h-auto object-contain shadow-sm border-2 border-stone-127 block rounded-none bg-stone-50"
+                     src="images/uk_entropy_scatter.png" 
+                     alt="Research Diagram">
+              </div>
+              
+              <!-- Research Metadata & Abstract Column -->
+              <div class="md:col-span-3 text-stone-800 space-y-1 text-left">
+                <div class="font-bold text-stone-900 text-base leading-snug">
+                  Explaining Scenic Beauty Through Alexander's Properties of Living Structure
+                </div>
+                <div class="text-sm text-stone-500">Working Paper <b>[2026]</b></div>
+                <div class="text-sm"><b>Sayan Patra</b>, Junjun Yin</div>
+                <div class="text-sm font-medium text-sky-600 space-x-2 pt-0.5">
+                  <a href="soon" class="hover:text-sky-800" target="_blank" rel="noopener noreferrer">[Arxiv]</a>
+                  <a href="soon" class="hover:text-sky-800" target="_blank" rel="noopener noreferrer">[Website]</a>
+                </div>
+                <p class="mt-2 text-xs text-stone-600 leading-relaxed text-justify pt-2">
+                  <strong>Abstract:</strong>
+                  This research bridges spatial design theory and computer vision to quantify the hidden geometric patterns that influence human perceptions of landscape beauty. By translating qualitative design principles into measurable image features, the framework aims to improve scenicness prediction models and condition generative AI architectures to produce more visually coherent landscapes. The findings will support future applications in urban planning, environmental design, and interpretable AI systems.
+                </p>
+              </div>
+            </div>
 
-<!-- RESEARCH -->
-<div id="research" class="tab-content hidden mt-6 blue-bolds">
-<p>
-Neuromorphic architectures integrated with <b>non-Euclidean learning</b>, 
-<b>generative models</b>, and <b>game-theoretic systems</b>.
-</p>
-</div>
+            <!-- Research Item 2 -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-start pt-8 border-t border-stone-100">
+              <!-- Research Figure Column -->
+              <div class="md:col-span-1">
+                <img class="w-full h-auto object-contain shadow-sm border-2 border-stone-127 block rounded-none bg-stone-50"
+                     src="images/newresearch.jpg" 
+                     alt="Research Diagram">
+              </div>
 
-<!-- INTERESTS -->
-<div id="interests" class="tab-content hidden mt-6 blue-bolds">
-<ul class="list-disc pl-6">
-<li><b>Neuromorphic systems</b></li>
-<li><b>Geometric deep learning</b></li>
-<li><b>Uncertainty quantification</b></li>
-<li><b>Generative modeling</b></li>
-<li><b>Multi-agent learning</b></li>
-</ul>
-</div>
+              <!-- Research Metadata & Abstract Column -->
+              <div class="md:col-span-3 text-stone-800 space-y-1 text-left">
+                <div class="font-bold text-stone-900 text-base leading-snug">
+                  Neural Population Dynamics for Adaptive Robotic Control: A Bio-Inspired Hierarchical Learning Framework for Embodied Intelligence
+                </div>
+                <div class="text-sm text-stone-500">Working Paper <b>[2026]</b></div>
+                <div class="text-sm"><b>Sayan Patra</b></div>
+                <div class="text-sm font-medium text-sky-600 space-x-2 pt-0.5">
+                  <a href="#" class="hover:text-sky-800" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                  <a href="#" class="hover:text-sky-800" target="_blank" rel="noopener noreferrer">[Code]</a>
+                </div>
+                <p class="mt-2 text-xs text-stone-600 leading-relaxed text-justify pt-2">
+                  <strong>Abstract:</strong> 
+                  This research presents a brain-inspired robotic learning framework that integrates neural population dynamics and hierarchical control to improve robotic adaptability in dynamic environments. By decoding large-scale biological neural datasets into temporal dynamical models, the project translates sensorimotor principles into a robust, three-layer architecture for autonomous manipulation and navigation. Ultimately, this work establishes a computational bridge between neuroscience and real-world embodied intelligence.
+                </p>
+              </div>
+            </div>
+          </div>
 
-<!-- CONTACT ICONS  -->
-<div class="flex flex-wrap gap-6 text-sm pt-6 justify-center">
+          <!-- News Section -->
+          <div class="space-y-4 mt-16">
+            <div>
+              <div class="text-xl font-bold border-b-2 border-stone-300 pb-1 text-stone-900">News</div>
+            </div>
+            <div class="p-3 text-sm space-y-2 text-left">
+              <div class="flex gap-4 items-baseline">
+                <span class="font-bold shrink-0 text-stone-900">March 2026</span>
+                <span class="text-stone-700">Started working with Dr. Junjun Yin.</span>
+              </div>
+            </div>
+          </div>
 
-<a href="mailto:sayan.patra@gwu.edu" class="flex items-center gap-1">
-<span>Email</span>
-</a>
+        </div>
+        <!-- Closes col-span-4 (Right Main Content Stack) -->
 
-<a href="https://github.com/sayanpatraa" target="_blank" class="flex items-center gap-1">
-<span>GitHub</span>
-</a>
-
-<a href="https://www.linkedin.com/in/sayan-p-13a76a241/" target="_blank">
-<span>LinkedIn</span>
-</a>
-
-<a href="https://www.sayanpatra.com" target="_blank">
-<span>Website</span>
-</a>
-
-<a href="https://drive.google.com/file/d/18TqgfJTSJ9ThWh_NRGm5UhxCQdufMHFt/view" target="_blank">
-<span>CV</span>
-</a>
-
-</div>
-
-<!-- PUBLICATION FILTER -->
-<div class="mt-12 flex gap-4 justify-center">
-<button onclick="filterPubs('all')">All</button>
-<button onclick="filterPubs('working')">Working</button>
-</div>
-
-<!-- PUBLICATIONS  -->
-<div class="mt-10 space-y-10">
-
-<!-- PAPER 1 -->
-<div class="pub working grid md:grid-cols-4 gap-6">
-<img src="images/uk_entropy_scatter.png">
-
-<div class="md:col-span-3 text-sm">
-<div class="font-bold">
-Explaining Scenic Beauty Through Alexander’s Properties
-</div>
-
-<div class="text-sm">Working Paper [2026]</div>
-
-<div><b>Sayan Patra</b>, Junjun Yin</div>
-
-<p class="text-xs mt-2">
-<strong>Abstract:</strong>
-This research bridges spatial design theory and computer vision to quantify hidden geometric
-patterns influencing scenic perception. The framework translates qualitative structure into
-measurable representations for prediction and generative conditioning.
-</p>
-
-</div>
-</div>
-
-<!-- PAPER 2 -->
-<div class="pub working grid md:grid-cols-4 gap-6 border-t pt-6">
-<img src="images/newresearch.jpg">
-
-<div class="md:col-span-3 text-sm">
-<div class="font-bold">
-Neural Population Dynamics for Adaptive Robotic Control
-</div>
-
-<div class="text-sm">Working Paper [2026]</div>
-
-<div><b>Sayan Patra</b></div>
-
-<p class="text-xs mt-2">
-<strong>Abstract:</strong>
-This work develops a hierarchical control system derived from neural population dynamics,
-linking biological computation with embodied intelligence under uncertainty.
-</p>
-
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-</div>
-
-<!-- SCRIPTS -->
-
-<script>
-/* TABS */
-const tabs = document.querySelectorAll(".tab-btn");
-const contents = document.querySelectorAll(".tab-content");
-
-tabs.forEach(tab => {
-  tab.addEventListener("click", () => {
-    contents.forEach(c => c.classList.add("hidden"));
-    document.getElementById(tab.dataset.tab).classList.remove("hidden");
-  });
-});
-
-/* DARK MODE */
-function toggleDark(){
-  document.body.classList.toggle("dark");
-}
-
-/* FILTER */
-function filterPubs(type){
-  document.querySelectorAll(".pub").forEach(el=>{
-    el.style.display = (type==="all" || el.classList.contains(type)) ? "grid":"none";
-  });
-}
-</script>
-
+      </div>
+      <!-- Closes Master Layout Grid -->
+    </div>
+    <!-- Closes max-w-5xl Frame -->
+  </div>
+  <!-- Closes grid place-items-center -->
 </body>
+
 </html>
