@@ -1,12 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<script src="https://cdn.tailwindcss.com"></script>
+
 <title>Sayan Patra</title>
 <link rel="icon" href="/favicon.ico">
-<script src="https://cdn.tailwindcss.com"></script>
 
 <style>
 body {
@@ -14,166 +16,209 @@ body {
   cursor: url('https://raw.githubusercontent.com/Sayanpatraa/sayanpatraa.github.io/main/custom-icon.cur'), auto;
 }
 
-/* scientific emphasis */
-.blue-bolds b { color:#2563eb; }
-
-/*  justified academic typography */
+/*  justified academic text */
 p, li {
   text-align: justify;
 }
+
+/* emphasis */
+.blue-bolds b {
+  color: #2563eb;
+}
+
+/* dark mode */
+.dark {
+  background: #0c0c0c;
+  color: #e5e5e5;
+}
+.dark .text-stone-700 { color:#d6d6d6; }
+.dark .text-stone-900 { color:#ffffff; }
+.dark .border-stone-200 { border-color:#333; }
+.hidden { display:none; }
+
 </style>
 </head>
 
-<body class="bg-white text-stone-900 flex justify-center py-12">
+<body class="min-h-screen flex justify-center py-10">
 
-<div class="max-w-6xl w-full px-6">
+<div class="max-w-5xl p-6">
 
-<!-- HEADER -->
-<div class="grid md:grid-cols-5 gap-10">
+<!--ARK MODE BUTTON -->
+<div class="flex justify-end mb-4">
+<button onclick="toggleDark()" class="text-sm border px-3 py-1 hover:bg-stone-200">
+Mode
+</button>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
 
 <!-- LEFT -->
-<div class="md:col-span-1 space-y-6">
-<img class="w-full border border-stone-200"
+<div class="md:col-span-1 md:pt-10">
+<img class="w-full aspect-square object-cover border-2 border-stone-200"
 src="https://avatars.githubusercontent.com/u/179540456?v=4">
-<div class="text-sm text-stone-700">Washington, DC</div>
 </div>
 
 <!-- RIGHT -->
-<div class="md:col-span-4">
+<div class="col-span-4">
 
-<div class="text-3xl font-bold mb-2">Sayan Patra</div>
+<div class="text-3xl font-bold p-3 text-center">Sayan Patra</div>
 
-<p class="text-sm text-stone-700 leading-relaxed blue-bolds">
-Research in <b>neuromorphic computation</b>, <b>geometric learning</b>, and 
-<b>uncertainty-aware inference</b>. Focus on unified modeling of 
-<b>aleatory uncertainty</b> (stochastic variability) and 
-<b>epistemic uncertainty</b> (model incompleteness) through 
-<b>probabilistic representations</b> and <b>generative structure</b>.
+<!-- TABS -->
+<div class="flex justify-center mt-4">
+<div class="flex space-x-4 border-b pb-2">
+<button class="tab-btn" data-tab="bio">Bio</button>
+<button class="tab-btn" data-tab="research">Research</button>
+<button class="tab-btn" data-tab="interests">Interests</button>
+</div>
+</div>
+
+<!-- BIO -->
+<div id="bio" class="tab-content mt-6 blue-bolds">
+<p>
+My work centers on <b>neuromorphic computing</b>. I unify sensory-driven computation with 
+<b>geometric machine learning</b> and <b>generative modeling</b>.
 </p>
 
-<p class="text-sm text-stone-700 mt-3">
-M.S. Data Science, George Washington University <br>
-Honors B.Sc. Mathematics <br>
-Research with <b>Dr. Junjun Yin</b>
+<p class="mt-3">
+I model systems under <b>aleatory uncertainty</b> and <b>epistemic uncertainty</b>, 
+emphasizing probabilistic inference and decision-theoretic consistency.
 </p>
 
-<!-- CONTACT ICONS -->
-<div class="flex flex-wrap gap-6 text-stone-600 text-sm pt-5">
+<p class="mt-3">
+Honors B.Sc. Mathematics. Amazon (EMEA Strategy). M.S. Data Science, GWU. Research with <b>Dr. Junjun Yin</b>.
+</p>
+</div>
 
-<a href="mailto:sayan.patra@gwu.edu" class="flex items-center gap-1.5 hover:text-blue-600">
-<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-<path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0-8.25 5.5-8.25-5.5"></path>
-</svg>
+<!-- RESEARCH -->
+<div id="research" class="tab-content hidden mt-6 blue-bolds">
+<p>
+Neuromorphic architectures integrated with <b>non-Euclidean learning</b>, 
+<b>generative models</b>, and <b>game-theoretic systems</b>.
+</p>
+</div>
+
+<!-- INTERESTS -->
+<div id="interests" class="tab-content hidden mt-6 blue-bolds">
+<ul class="list-disc pl-6">
+<li><b>Neuromorphic systems</b></li>
+<li><b>Geometric deep learning</b></li>
+<li><b>Uncertainty quantification</b></li>
+<li><b>Generative modeling</b></li>
+<li><b>Multi-agent learning</b></li>
+</ul>
+</div>
+
+<!-- CONTACT ICONS  -->
+<div class="flex flex-wrap gap-6 text-sm pt-6 justify-center">
+
+<a href="mailto:sayan.patra@gwu.edu" class="flex items-center gap-1">
 <span>Email</span>
 </a>
 
-<a href="https://github.com/sayanpatraa" target="_blank" class="flex items-center gap-1.5 hover:text-blue-600">
-<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-<path d="M12 2C6.5 2 2 6.5 2 12a10 10 0 0 0 6.8 9.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.3 1.1 2.9.8.1-.6.3-1 .6-1.3-2.2-.2-4.6-1.1-4.6-4.9 0-1.1.4-2 1-2.7-.1-.2-.4-1.2.1-2.6 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.6.6.7 1 1.6 1 2.7 0 3.8-2.3 4.7-4.6 4.9.4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0 0 22 12c0-5.5-4.5-10-10-10z"/>
-</svg>
+<a href="https://github.com/sayanpatraa" target="_blank" class="flex items-center gap-1">
 <span>GitHub</span>
 </a>
 
-<a href="https://www.linkedin.com/in/sayan-p-13a76a241/" target="_blank" class="flex items-center gap-1.5 hover:text-blue-600">
-<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-<path d="M4 4h16v16H4zM8 18V10H5v8h3zm-1.5-9.3c1 0 1.5-.7 1.5-1.4C8 6.6 7.5 6 6.5 6S5 6.6 5 7.3c0 .7.5 1.4 1.5 1.4zM19 18v-4.4c0-2.4-1.3-3.6-3-3.6-1.4 0-2 .8-2.3 1.4V10h-3v8h3v-4.5c0-.2 0-.5.1-.6.3-.5.7-1 1.6-1 1.1 0 1.5.8 1.5 2V18h3z"/>
-</svg>
+<a href="https://www.linkedin.com/in/sayan-p-13a76a241/" target="_blank">
 <span>LinkedIn</span>
 </a>
 
-<a href="https://www.sayanpatra.com" target="_blank" class="flex items-center gap-1.5 hover:text-blue-600">
-<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-<circle cx="12" cy="12" r="9"></circle>
-</svg>
+<a href="https://www.sayanpatra.com" target="_blank">
 <span>Website</span>
 </a>
 
-<a href="https://drive.google.com/file/d/18TqgfJTSJ9ThWh_NRGm5UhxCQdufMHFt/view" target="_blank" class="flex items-center gap-1.5 hover:text-blue-600">
-<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-<path d="M7 7h10v10H7z"></path>
-</svg>
+<a href="https://drive.google.com/file/d/18TqgfJTSJ9ThWh_NRGm5UhxCQdufMHFt/view" target="_blank">
 <span>CV</span>
 </a>
 
 </div>
-</div>
-</div>
 
-<!-- RESEARCH STATEMENT -->
-<div class="mt-12 max-w-3xl text-sm text-stone-700 leading-relaxed blue-bolds">
-
-<p>
-I develop <b>learning systems</b> under explicit uncertainty. Current work integrates 
-<b>neuromorphic architectures</b> with <b>geometric machine learning</b> on 
-<b>non-Euclidean domains</b>.
-</p>
-
-<p class="mt-3">
-Central focus is joint modeling of <b>aleatory uncertainty</b> and 
-<b>epistemic uncertainty</b> through <b>probabilistic inference</b>, 
-<b>structured generative models</b>, and <b>decision-theoretic learning</b>.
-</p>
-
-<p class="mt-3">
-Objective: robust inference, interpretable generative structure, and stable behavior 
-in adaptive multi-agent systems.
-</p>
-
+<!-- PUBLICATION FILTER -->
+<div class="mt-12 flex gap-4 justify-center">
+<button onclick="filterPubs('all')">All</button>
+<button onclick="filterPubs('working')">Working</button>
 </div>
 
-<!-- PUBLICATIONS -->
-<div class="mt-16">
-<h2 class="text-xl font-bold">Publications & Preprints</h2>
-
-<div class="mt-8 space-y-10">
+<!-- PUBLICATIONS  -->
+<div class="mt-10 space-y-10">
 
 <!-- PAPER 1 -->
-<div class="grid md:grid-cols-4 gap-6">
-<img src="images/uk_entropy_scatter.png" class="border">
+<div class="pub working grid md:grid-cols-4 gap-6">
+<img src="images/uk_entropy_scatter.png">
 
 <div class="md:col-span-3 text-sm">
-<div class="font-semibold">Explaining Scenic Structure via Geometric Regularity</div>
-<div class="text-stone-500">Preprint, 2026</div>
+<div class="font-bold">
+Explaining Scenic Beauty Through Alexander’s Properties
+</div>
+
+<div class="text-sm">Working Paper [2026]</div>
+
 <div><b>Sayan Patra</b>, Junjun Yin</div>
 
-<p class="text-xs text-stone-600 mt-2">
+<p class="text-xs mt-2">
 <strong>Abstract:</strong>
-This work formalizes spatial coherence through measurable geometric invariants derived from structural regularity. 
-The framework constructs feature mappings that enable interpretable prediction of scenic perception and provides 
-conditioning mechanisms for generative vision models. The approach establishes a bridge between geometric structure, 
-human perceptual response, and probabilistic generative systems.
+This research bridges spatial design theory and computer vision to quantify hidden geometric
+patterns influencing scenic perception. The framework translates qualitative structure into
+measurable representations for prediction and generative conditioning.
 </p>
+
 </div>
 </div>
 
 <!-- PAPER 2 -->
-<div class="grid md:grid-cols-4 gap-6 border-t pt-8">
-<img src="images/newresearch.jpg" class="border">
+<div class="pub working grid md:grid-cols-4 gap-6 border-t pt-6">
+<img src="images/newresearch.jpg">
 
 <div class="md:col-span-3 text-sm">
-<div class="font-semibold">Neural Population Dynamics for Adaptive Control</div>
-<div class="text-stone-500">Working Paper, 2026</div>
+<div class="font-bold">
+Neural Population Dynamics for Adaptive Robotic Control
+</div>
+
+<div class="text-sm">Working Paper [2026]</div>
+
 <div><b>Sayan Patra</b></div>
 
-<p class="text-xs text-stone-600 mt-2">
+<p class="text-xs mt-2">
 <strong>Abstract:</strong>
-This work develops a hierarchical control framework derived from neural population dynamics. 
-Temporal structure observed in biological systems is translated into computational models that 
-enable adaptive control in embodied agents operating under uncertainty. The framework integrates 
-representation learning, dynamical systems modeling, and probabilistic inference to achieve robust 
-sensorimotor adaptation in non-stationary environments.
+This work develops a hierarchical control system derived from neural population dynamics,
+linking biological computation with embodied intelligence under uncertainty.
 </p>
-</div>
-</div>
 
 </div>
 </div>
 
-<!-- FOOTER -->
-<div class="mt-20 text-center text-xs text-stone-500">
-© 2026 Sayan Patra
 </div>
 
 </div>
+</div>
+</div>
+
+<!-- SCRIPTS -->
+
+<script>
+/* TABS */
+const tabs = document.querySelectorAll(".tab-btn");
+const contents = document.querySelectorAll(".tab-content");
+
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    contents.forEach(c => c.classList.add("hidden"));
+    document.getElementById(tab.dataset.tab).classList.remove("hidden");
+  });
+});
+
+/* DARK MODE */
+function toggleDark(){
+  document.body.classList.toggle("dark");
+}
+
+/* FILTER */
+function filterPubs(type){
+  document.querySelectorAll(".pub").forEach(el=>{
+    el.style.display = (type==="all" || el.classList.contains(type)) ? "grid":"none";
+  });
+}
+</script>
+
 </body>
 </html>
