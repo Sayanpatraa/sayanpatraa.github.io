@@ -28,16 +28,16 @@
         <!-- Main Content (Full Width on Desktop) -->
         <div class="col-span-1 md:col-span-5">
           
-          <!-- Header: Photo, Name, Tabs, and Bio Container -->
-          <div class="grid grid-cols-1 md:grid-cols-5 gap-6 -mt-6">
+          <!-- Header: Photo, Name, and Tabs Container -->
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-6 items-start -mt-6">
             
-            <!-- Profile Image Column -->
+            <!-- Profile Image -->
             <div class="md:col-span-1">
               <img class="w-full aspect-square object-cover shadow-sm border-2 border-stone-200 block rounded-none"
                 src="https://avatars.githubusercontent.com/u/179540456?v=4" alt="Profile">
             </div>
 
-            <!-- Name, Tabs, and Bio Section -->
+            <!-- Name and Tabs Section -->
             <div class="md:col-span-4">
               <!-- Name Header -->
               <div class="font-bold text-3xl p-3 flex justify-center text-center text-stone-900">
@@ -53,59 +53,6 @@
                 </div>
               </div>
 
-              <!-- Tab Content -->
-              <div id="bio" class="tab-content mt-6">
-                <div class="text-md blue-bolds space-y-4 text-stone-700 leading-relaxed text-left pt-3">    
-                  <div>
-                    My <b>current work focuses on</b> <b>neuromorphic computing</b> as a computational substrate for 
-                    next‑generation intelligent systems. I investigate <b>spiking neural dynamics</b> 
-                    and <b>event‑driven computation</b> for processing high-dimensional sensory data, 
-                    particularly in <b>vision</b>, <b>tactile sensing</b>, and <b>spatial perception</b>. 
-                    My research examines the integration of biologically inspired architectures with 
-                    <b>geometric machine learning</b> on <b>non‑Euclidean domains</b>, 
-                    <b>deep generative models</b>, and <b>game‑theoretic learning frameworks</b>.
-                  </div>
-
-                  <div>     
-                    I hold an <b>Honors B.Sc. in Mathematics</b> and previously worked in 
-                    <b>EMEA Retail Strategy</b> at <b>Amazon Corporate</b>. I am currently pursuing an 
-                    <b>M.S. in Data Science</b> at <b>George Washington University</b>, where I conduct 
-                    research under <b>Dr. Junjun Yin</b>, focusing on mathematically grounded approaches 
-                    to learning in structured, high-dimensional systems.
-                  </div>   
-
-                  <div> 
-                    I am seeking research opportunities at the intersection of 
-                    <b>neuromorphic architectures</b>, <b>spiking neural networks</b>, 
-                    <b>non‑Euclidean representations</b>, <b>generative modeling</b>, and 
-                    <b>non‑smooth dynamical games</b>, with an emphasis on scalable, 
-                    energy‑efficient learning systems.   
-                  </div>  
-                </div>
-              </div>
-
-              <div id="research" class="tab-content hidden mt-6">
-                <div class="text-md blue-bolds space-y-4 text-stone-700 leading-relaxed text-left pt-3">
-                  <div> 
-                    I am seeking research opportunities at the intersection of 
-                    <b>neuromorphic architectures</b>, <b>spiking neural networks</b>, 
-                    <b>non‑Euclidean representations</b>, <b>generative modeling</b>, and 
-                    <b>non‑smooth dynamical games</b>, with an emphasis on scalable, 
-                    energy‑efficient learning systems.   
-                  </div>
-                </div>
-              </div>
-
-              <div id="interests" class="tab-content hidden mt-6">
-                <ul class="list-disc pl-6 leading-relaxed text-stone-700 blue-bolds">
-                  <li><b>Neuromorphic architectures</b> for sensory-driven computation</li>
-                  <li><b>Geometric deep learning</b> on graphs, manifolds, and non-Euclidean spaces</li>
-                  <li><b>Generative modeling</b> for image synthesis and multi-modal learning</li>
-                  <li><b>Non-smooth games</b> and equilibrium behavior in high-dimensional systems</li>
-                  <li><b>Multi-agent learning</b> and strategic interaction</li>
-                </ul>
-              </div>
-
               <!-- Tab Script -->
               <script>
                 const tabs = document.querySelectorAll(".tab-btn");
@@ -119,6 +66,59 @@
                 });
               </script>
             </div>
+          </div>
+
+          <!-- Tab Content -->
+          <div id="bio" class="tab-content mt-6">
+            <div class="text-md blue-bolds space-y-4 text-stone-700 leading-relaxed text-left pt-3">    
+              <div>
+                My <b>current work focuses on</b> <b>neuromorphic computing</b> as a computational substrate for 
+                next‑generation intelligent systems. I investigate <b>spiking neural dynamics</b> 
+                and <b>event‑driven computation</b> for processing high-dimensional sensory data, 
+                particularly in <b>vision</b>, <b>tactile sensing</b>, and <b>spatial perception</b>. 
+                My research examines the integration of biologically inspired architectures with 
+                <b>geometric machine learning</b> on <b>non‑Euclidean domains</b>, 
+                <b>deep generative models</b>, and <b>game‑theoretic learning frameworks</b>.
+              </div>
+
+              <div>     
+                I hold an <b>Honors B.Sc. in Mathematics</b> and previously worked in 
+                <b>EMEA Retail Strategy</b> at <b>Amazon Corporate</b>. I am currently pursuing an 
+                <b>M.S. in Data Science</b> at <b>George Washington University</b>, where I conduct 
+                research under <b>Dr. Junjun Yin</b>, focusing on mathematically grounded approaches 
+                to learning in structured, high-dimensional systems.
+              </div>   
+
+              <div> 
+                I am seeking research opportunities at the intersection of 
+                <b>neuromorphic architectures</b>, <b>spiking neural networks</b>, 
+                <b>non‑Euclidean representations</b>, <b>generative modeling</b>, and 
+                <b>non‑smooth dynamical games</b>, with an emphasis on scalable, 
+                energy‑efficient learning systems.   
+              </div>  
+            </div>
+          </div>
+
+          <div id="research" class="tab-content hidden mt-6">
+            <div class="text-md blue-bolds space-y-4 text-stone-700 leading-relaxed text-left pt-3">
+              <div> 
+                I am seeking research opportunities at the intersection of 
+                <b>neuromorphic architectures</b>, <b>spiking neural networks</b>, 
+                <b>non‑Euclidean representations</b>, <b>generative modeling</b>, and 
+                <b>non‑smooth dynamical games</b>, with an emphasis on scalable, 
+                energy‑efficient learning systems.   
+              </div>
+            </div>
+          </div>
+
+          <div id="interests" class="tab-content hidden mt-6">
+            <ul class="list-disc pl-6 leading-relaxed text-stone-700 blue-bolds">
+              <li><b>Neuromorphic architectures</b> for sensory-driven computation</li>
+              <li><b>Geometric deep learning</b> on graphs, manifolds, and non-Euclidean spaces</li>
+              <li><b>Generative modeling</b> for image synthesis and multi-modal learning</li>
+              <li><b>Non-smooth games</b> and equilibrium behavior in high-dimensional systems</li>
+              <li><b>Multi-agent learning</b> and strategic interaction</li>
+            </ul>
           </div>
 
           <!-- Social Contact Links -->
